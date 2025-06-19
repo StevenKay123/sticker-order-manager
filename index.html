@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticker Order Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sticker Order Manager</h1>
+
+        <div class="order-form-section">
+            <h2>Add New Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Customer Name:</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderDescription">Order Description (e.g., 50x Vinyl Stickers 2"x3"):</label>
+                    <textarea id="orderDescription" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Ready for Pickup">Ready for Pickup</option>
+                        <option value="Archived">Archived</option>
+                    </select>
+                </div>
+                <button type="submit">Add Order</button>
+            </form>
+        </div>
+
+        <div class="order-list-section">
+            <h2>Current Orders</h2>
+            <table id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Description</th>
+                        <th>Qty</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

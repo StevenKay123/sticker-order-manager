@@ -1,0 +1,173 @@
+/* Basic Reset & Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for overall layout */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+.order-form-section {
+    background-color: #ecf0f1;
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button[type="submit"] {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+    display: block; /* Make button full width if needed, or inline-block */
+    width: 100%; /* For responsive button */
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Table Styling */
+.order-list-section {
+    margin-top: 30px;
+}
+
+#ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#ordersTable th,
+#ordersTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#ordersTable th {
+    background-color: #3498db; /* Blue header */
+    color: white;
+    font-weight: bold;
+}
+
+#ordersTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping for readability */
+}
+
+#ordersTable tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Status-specific styling (JavaScript will add these classes) */
+.status-Pending {
+    color: #e67e22; /* Orange */
+    font-weight: bold;
+}
+.status-InProgress {
+    color: #3498db; /* Blue */
+    font-weight: bold;
+}
+.status-Completed {
+    color: #28a745; /* Green */
+    font-weight: bold;
+}
+.status-ReadyForPickup { /* Custom class, adjust if exact name differs */
+    color: #8e44ad; /* Purple */
+    font-weight: bold;
+}
+.status-Archived {
+    color: #7f8c8d; /* Grey */
+    font-weight: bold;
+}
+
+/* Action Buttons */
+.action-buttons button {
+    background-color: #dc3545; /* Red for Delete */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button.edit-btn {
+    background-color: #007bff; /* Blue for Edit (if we add later) */
+}
+
+.action-buttons button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    #ordersTable th,
+    #ordersTable td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select,
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
